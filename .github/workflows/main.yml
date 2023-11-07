@@ -1,0 +1,23 @@
+curl -X POST \
+  https://api.serverspace.com.tr/api/v1/servers \
+  -H 'content-type: application/json' \
+  -H 'x-api-key: <your API key>' \
+  -d '{
+  "location_id": "tr",
+  "cpu": 1,
+  "ram_mb": 1024,
+  "image_id": "Windows-Server 2022 Std-X64",
+  "name": "<your server name>",
+  "networks": [
+    {
+      "bandwidth_mbps": 50
+    }
+  ],
+  "volumes": [
+    {
+      "name": "boot",
+      "size_mb": 25600
+    }
+  ]
+}'
+        
